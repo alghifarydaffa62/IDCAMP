@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Profil Bandung</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Bandung</h1>
-    <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu
+    <div class="jumbotron">
+      <h1>Bandung</h1>
+      <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu
         kota provinsi tersebut.</p>
+    </div>
+    
     <nav>
       <ul>
         <li><a href="#sejarah">Sejarah</a></li>
@@ -21,9 +28,9 @@
 
   <main>
     <div id="content">
-      <article>
+      <article class="card">
         <h2 id="sejarah">Sejarah</h2>
-        <img src="./images/image/history.jpg" alt="">
+        <img src="./images/image/history.jpg" alt="" class="feature-image">
         <p>
             Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya
           sungai Citarum oleh lava Gunung Tangkuban Parahu yang lalu membentuk
@@ -46,9 +53,9 @@
         </p>
       </article>
 
-    <article>
+    <article class="card">
       <h2 id="geografis">geografis</h2>
-      <img src="./images/image/geografis.jpg" alt="">
+      <img src="./images/image/geografis.jpg" alt="" class="feature-image">
       <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi
           wilayahnya bagaikan sebuah mangkok raksasa, secara geografis kota ini
           terletak di tengah-tengah provinsi Jawa Barat, serta berada pada
@@ -65,7 +72,7 @@
       </p>
     </article>
 
-    <article>
+    <article class="card">
       <h2 id="wisata">wisata</h2>
       <p>Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan
           utama dalam menikmati liburan akhir pekan terutama dari masyarakat yang
@@ -75,7 +82,7 @@
       
       <section>
         <h3>Farm House Lembang</h3>
-        <img src="./images/image/farm-house.jpg" alt="">
+        <img src="./images/image/farm-house.jpg" alt="" class="feature-image">
         <p>
             Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata
           yang tidak pernah sepi pengunjung. Selain karena letaknya strategis,
@@ -86,7 +93,7 @@
 
         <section>
           <h3>Observatorium Boscha</h3>
-          <img src="./images/image/bosscha.jpg" alt="">
+          <img src="./images/image/bosscha.jpg" alt="" class="feature-image">
           <p>
               Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt
             Bimasakti, Refraktor Bamberg, Cassegrain GOTO, dan Teleskop Surya.
@@ -103,11 +110,11 @@
     </div>
 
     <aside>
-      <article>
+      <article class="profile card">
         <header>
           <h2>Kota Bandung</h2>
           <p>Kota Kembang Paris van Java</p>
-          <figure>
+          <figure class="profile">
             <img src="./images/image/Bandung_coa.png" />
             <figcaption>Lambang</figcaption>
           </figure>
