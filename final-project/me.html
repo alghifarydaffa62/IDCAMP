@@ -8,47 +8,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
    <script src="script.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+    </script>
 
    <header>
-    <h2>DFPRO</h2>
+    <div class="title">
+        <h2>DFPRO</h2>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
 
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">My Skills</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="me.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </nav>
    </header>
 
    <main>
-        <div class="content">
-            <h1 class="name">Hi Guys👋, I'm Muhammad Daffa Al Ghifary</h1>
-            <article class="desc">
-                <p>
-                    Freelancer, Freshman student, Highly interested about <br>
-                technological inovation, front-end web developer
-                </p>
-            </article>
-
-            <button>Know me more</button>
+        <div class="flex-container">
+            <div class="content" data-aos="fade-up" >
+                <h1 class="name" >Hi Guys👋, I'm Muhammad Daffa Al Ghifary</h1>
+                <article class="desc">
+                    <p>
+                        Freelancer, Freshman student, Highly interested about <br>
+                    technological inovation, front-end web developer
+                    </p>
+                </article>
+    
+                <button data-aos="fade-up"><a href="#about">Know Me More</a></button>
+            </div>
+    
+            <aside data-aos="fade-up" >
+                <div class="sosmed">
+                    <ul>
+                      <li><a href="https://github.com/alghifarydaffa62" target="_blank"><i class="fab fa-github"></i></a></li>
+                      <li><a href="https://www.instagram.com/df_webdev?utm_source=qr&igsh=MWNyYWZ4cnNoeTZjdg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                  </div>
+            </aside>
         </div>
+        
+        <article class="about" id="about">
+            <aside class="img" data-aos="fade-up">
+                <img src="./img/profile.jpg" alt="">
+            </aside>
+            <div class="about-content" data-aos="fade-up">
+                <h1>About Me</h1>
+                <p>I am a freshman student at the Electronic Engineering Polytechnic Institute of 
+                    Surabaya, embarking on an exciting journey to establish myself as a freelancer 
+                    in front-end web development</p>
+                    <div class="accordion">
+                        <section class="link1">
+                            <h3 id="link1">Who are you ?</h3>
+                            <div class="dropdown">
+                                <p>Iam Muhammad Daffa Al Ghifary who is very exited in technological
+                                    innovation and currently learning in front end web development</p>
+                            </div>
+                        </section>
 
-        <aside>
-            <div class="sosmed">
-                <ul>
-                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                </ul>
-              </div>
-        </aside>
+                        <section class="link2">
+                            <h3 id="link2">What is you passion ?</h3>
+                            <div class="dropdown2">
+                                <p>Iam very excited in tecnological innovation that's why i choose to learn front end web development
+                                    so i can make an innovation in shape of website.</p>
+                            </div>
+                        </section>
+
+                        <section class="link3">
+                            <h3 id="link3">What is your motivation ?</h3>
+                            <div class="dropdown3">
+                                <p>I always want to be more better, more skillful, more solid both in knowledge and in 
+                                    person
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+            </div>
+        </article>
+
+        <h1 class ="contact" id="contact" style="text-align: center;" data-aos="fade-up">Interested to work with me ?</h1>
+        <article class="sosmed2" data-aos="fade-up">
+            <ul>
+                <li><a href="https://github.com/alghifarydaffa62" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/df_webdev?utm_source=qr&igsh=MWNyYWZ4cnNoeTZjdg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              </ul>
+        </article>
    </main>
+
+   <footer>Final Project &#169; 2024, Muhammad Daffa A</footer>
 </body>
 </html>
