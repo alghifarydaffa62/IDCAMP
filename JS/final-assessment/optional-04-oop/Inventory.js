@@ -22,7 +22,7 @@ class Inventory {
     }
 
     listItems() {
-        return this.items.map(item => item.displayDetails())
+        return this.items.map(item => item.displayDetails()).join('\n')
     }
 }
 

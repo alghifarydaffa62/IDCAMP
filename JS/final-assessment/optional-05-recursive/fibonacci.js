@@ -1,11 +1,14 @@
 function fibonacci(n) {
-    const fibArray = [0, 1];
-  
-    for (let i = 2; i <= n; i++) {
-        fibArray.push(fibArray[i - 1] + fibArray[i - 2])
-    }
-    
-    return fibArray.slice(0, n + 1)
+    if (n === 0) {
+        return [0];
+      }
+      if (n === 1) {
+        return [0, 1];
+      }
+      
+      const fibArray = fibonacci(n - 1); // Rekursi untuk mendapatkan array sebelumnya
+      fibArray.push(fibArray[n - 1] + fibArray[n - 2]); // Tambahkan elemen berikutnya
+      return fibArray;
 }
 
 // Jangan hapus kode di bawah ini!
