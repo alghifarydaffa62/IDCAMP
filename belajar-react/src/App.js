@@ -1,6 +1,7 @@
 import './App.css';
 import dicoding from './dicoding-logo.png'
 import Sayhello from './component/sayHello';
+import News from './component/news';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <img src={dicoding} alt='hho'></img>
 
         <Sayhello nama="daffa" umur = "18" kampus = "PENS" prodi="Teknik Informatika"/>
+        <News/>
     </div>
   );
 }
