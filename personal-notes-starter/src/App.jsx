@@ -1,9 +1,14 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import NoteApp from './components/Noteapp'
 import './styles/style.css'
 
 function App() {
     return(
-        <h1>Hai Daffa!</h1>
+        <div>
+            <Navbar/>
+            <NoteApp/>
+        </div>
     )
 }
 
