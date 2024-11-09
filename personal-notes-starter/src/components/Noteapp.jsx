@@ -1,11 +1,13 @@
 import React from "react"
+import NoteInput from "./NoteInput"
 import '../styles/style.css'
 
 class NoteApp extends React.Component {
     render() {
         return(
-            <div>
-                <h1>Buat Catatan</h1>
+            <div className="note-app__body">
+                <h2>Buat Catatan</h2>
+                <NoteInput/>
             </div>
         )
     }
