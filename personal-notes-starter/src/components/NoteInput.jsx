@@ -8,7 +8,9 @@ class NoteInput extends React.Component {
 
         this.state = {
             title: '',
-            body: ''
+            body: '',
+            charLimit: 50,
+            charRemaining: 50
         }
 
         this.onTitlechangehandler = this.onTitlechangehandler.bind(this)
@@ -17,11 +19,15 @@ class NoteInput extends React.Component {
     }
 
     onTitlechangehandler(event) {
-        this.setState(() => {
-            return{
-                title: event.target.value
-            }
-        })
+        const input = event.target.value;
+        
+        // Pastikan tidak melebihi batas karakter
+        if (input.length <= this.state.charLimit) {
+            this.setState({
+                title: input,
+                charRemaining: this.state.charLimit - input.length
+            });
+        }
     }   
     
     onDescchangehandler(event) {
@@ -40,6 +46,8 @@ class NoteInput extends React.Component {
     render() {
         return(
             <form className="note-input" onSubmit={this.onSubmithandler}>
+                <h2>Buat Catatan</h2>
+                <p className="note-input__title__char-limit">Sisa karakter: {this.state.charRemaining}</p>
                 <input type="text" placeholder="Masukkan judul catatan..." value={this.state.title} onChange={this.onTitlechangehandler}/><br/>
                 <textarea placeholder="Tulis catatanmu disini..." value={this.state.body} onChange={this.onDescchangehandler}/><br/>
                 <button type="submit">Buat</button>

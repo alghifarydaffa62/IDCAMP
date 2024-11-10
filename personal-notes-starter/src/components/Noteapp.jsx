@@ -5,7 +5,6 @@ import NoteList from "./NoteList"
 import '../styles/style.css'
 
 class NoteApp extends React.Component {
-
     constructor(props) {
         super(props)
 
@@ -42,13 +41,14 @@ class NoteApp extends React.Component {
     render() {
         return(
             <div className="note-app__body">
-                <h2>Buat Catatan</h2>
                 <NoteInput addNote={this.AddNotehandler}/>
+                <h2>Catatan Aktif</h2>
                 {
                     this.state.note.length > 0 
                     ? <NoteList note={this.state.note} onDelete={this.onDeletehandler}/>
                     : <h2 className="notes-list__empty-message">Tidak ada catatan</h2>
                 }
+                <h2>Arsip</h2>
             </div>
         )
     }
