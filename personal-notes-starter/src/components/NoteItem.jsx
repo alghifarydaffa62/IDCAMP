@@ -1,21 +1,19 @@
 import React from "react"
 import NoteContent from "./NoteContent"
+import NoteAction from "./NoteAction"
+import { showFormattedDate } from "../utils"
 import '../styles/style.css'
 
-function NoteItem({id, title, date, body}) {
+function NoteItem({id, title, date, body, onDelete}) {
     return(
-        <div>
-            <h2>Catatan Aktif</h2>
             <div className="note-item">
                 <NoteContent 
                     title={title}
-                    date={date}
+                    date={showFormattedDate(date)}
                     body={body}
                 />
-                <NoteAction id={id}/>
+                <NoteAction id={id} onDelete={onDelete}/>
             </div>
-        </div>
-        
     )
 }
 

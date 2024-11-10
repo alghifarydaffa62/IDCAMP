@@ -2,17 +2,20 @@ import React from "react"
 import NoteItem from "./NoteItem"
 import '../styles/style.css'
 
-function NoteList({note}) {
+function NoteList({note, onDelete}) {
     return(
         <div className="notes-list">
             {
-                note.map((notes) => {
+                note.map((notes) => (
                     <NoteItem
                         key={notes.id}
                         id={notes.id}
-                        {...notes}
+                        title={notes.title}
+                        date={notes.createdAt}
+                        body={notes.body}
+                        onDelete={onDelete}                    
                     />
-                })
+                ))
             }
             
         </div>

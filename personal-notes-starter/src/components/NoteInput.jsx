@@ -8,11 +8,12 @@ class NoteInput extends React.Component {
 
         this.state = {
             title: '',
-            desc: ''
+            body: ''
         }
 
         this.onTitlechangehandler = this.onTitlechangehandler.bind(this)
         this.onDescchangehandler = this.onDescchangehandler.bind(this)
+        this.onSubmithandler = this.onSubmithandler.bind(this)
     }
 
     onTitlechangehandler(event) {
@@ -26,18 +27,23 @@ class NoteInput extends React.Component {
     onDescchangehandler(event) {
         this.setState(() => {
             return{
-                desc: event.target.value
+                body: event.target.value
             }
         })
     }
 
+    onSubmithandler(event) {
+        event.preventDefault()
+        this.props.addNote(this.state)
+    }
+
     render() {
         return(
-            <div className="note-input">
+            <form className="note-input" onSubmit={this.onSubmithandler}>
                 <input type="text" placeholder="Masukkan judul catatan..." value={this.state.title} onChange={this.onTitlechangehandler}/><br/>
-                <textarea placeholder="Tulis catatanmu disini..." value={this.state.desc} onChange={this.onDescchangehandler}/><br/>
+                <textarea placeholder="Tulis catatanmu disini..." value={this.state.body} onChange={this.onDescchangehandler}/><br/>
                 <button type="submit">Buat</button>
-            </div>
+            </form>
         )
     }
 }
