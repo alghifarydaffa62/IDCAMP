@@ -1,21 +1,14 @@
 import React from "react";
-import NoteTitle from "./NoteTitle"
-import NoteDate from "./Notedate"
-import NoteBody from "./NoteBody"
-import NoteAction from "./NoteAction";
 import '../styles/style.css'
 
-class NoteContent extends React.Component {
-    render() {
-        return(
-            <div className="note-item__content">
-                <NoteTitle/>
-                <NoteDate/>
-                <NoteBody/>
-                <NoteAction/>
-            </div>
-        )
-    }
+function NoteContent({title, date, body}) {
+    return(
+        <div className="note-item__content">
+            <h4 className="note-item__title">{title}</h4>
+            <p className="note-item__date">{date}</p>
+            <p className="note-item__body">{body}</p>
+        </div>
+    )
 }
 
 export default NoteContent

@@ -19,7 +19,7 @@ class NoteApp extends React.Component {
             <div className="note-app__body">
                 <h2>Buat Catatan</h2>
                 <NoteInput/>
-                <NoteList/>
+                <NoteList note={this.state.note}/>
             </div>
         )
     }

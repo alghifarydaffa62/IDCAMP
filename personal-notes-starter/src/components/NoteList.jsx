@@ -2,10 +2,19 @@ import React from "react"
 import NoteItem from "./NoteItem"
 import '../styles/style.css'
 
-function NoteList({notes}) {
+function NoteList({note}) {
     return(
         <div className="notes-list">
-            <NoteItem/>
+            {
+                note.map((notes) => {
+                    <NoteItem
+                        key={notes.id}
+                        id={notes.id}
+                        {...notes}
+                    />
+                })
+            }
+            
         </div>
     )
 }

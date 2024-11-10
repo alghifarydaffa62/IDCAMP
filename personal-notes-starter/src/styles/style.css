@@ -46,7 +46,7 @@ input::placeholder, textarea::placeholder {
 
 .note-app__body h2 {
   font-weight: normal;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 500px;
 }
 
