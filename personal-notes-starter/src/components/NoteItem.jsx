@@ -4,7 +4,7 @@ import NoteAction from "./NoteAction"
 import { showFormattedDate } from "../utils"
 import '../styles/style.css'
 
-function NoteItem({id, title, date, body, onDelete}) {
+function NoteItem({id, title, date, body, onDelete, onArchived, archived}) {
     return(
             <div className="note-item">
                 <NoteContent 
@@ -12,7 +12,7 @@ function NoteItem({id, title, date, body, onDelete}) {
                     date={showFormattedDate(date)}
                     body={body}
                 />
-                <NoteAction id={id} onDelete={onDelete}/>
+                <NoteAction id={id} onDelete={onDelete} onArchived={onArchived} archived={archived}/>
             </div>
     )
 }
